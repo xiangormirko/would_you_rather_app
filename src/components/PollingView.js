@@ -75,13 +75,13 @@ render () {
     return (
       <div className='polling-results'>
         <div className='polling-results__option'>
-          {this.state.vote === 'optionOne' || question.optionOne.votes.includes(authedUser) && (this.voteLabel())}
+          {(this.state.vote === 'optionOne' || question.optionOne.votes.includes(authedUser)) && (this.voteLabel())}
           <h4 className='polling-results-title'>{this.props.question.optionOne.text}</h4>
           <div className='polling-results__progress-bar'>{optionOneProgressBar}</div>
           <p className='polling-results__stats'>{`${optionOneVotes} out of ${totalVotes} votes`}</p>
         </div>
         <div className='polling-results__option'>
-          {this.state.vote === 'optionTwo' || question.optionTwo.votes.includes(authedUser) && (this.voteLabel())}
+          {(this.state.vote === 'optionTwo' || question.optionTwo.votes.includes(authedUser)) && (this.voteLabel())}
           <h4 className='polling-results-title'>{this.props.question.optionTwo.text}</h4>
           <div className='polling-results__progress-bar'>{optionTwoProgressBar}</div>
           <p className='polling-results__stats'>{`${optionTwoVotes} out of ${totalVotes} votes`}</p>
